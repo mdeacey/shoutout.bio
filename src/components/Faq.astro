@@ -1,0 +1,218 @@
+---
+const faqData = [
+  {
+    question: "Is this compliant with Google's policies?",
+    answer: "Yes. We create a private feedback channel first—customers always choose where to share publicly."
+  },
+  {
+    question: "What social media platforms do you support?",
+    answer: "Instagram, Facebook, TikTok, Twitter/X, LinkedIn, and YouTube. Enable whichever platforms you use."
+  },
+  {
+    question: "What happens to negative feedback?",
+    answer: "Comes directly to your email. Address concerns quickly and personally before they go public."
+  },
+  {
+    question: "Will I get more Google reviews AND social followers?",
+    answer: "Yes. Most businesses see 2-3x more reviews and meaningful social media growth."
+  },
+  {
+    question: "How do I send the link?",
+    answer: "Text message, email, QR code at checkout, or share verbally. We provide templates."
+  },
+  {
+    question: "Do I need technical skills?",
+    answer: "None. If you can copy-paste a link, you can use Shoutout.bio. Setup takes 10 minutes."
+  },
+  {
+    question: "Can I try it free?",
+    answer: "30-day free trial, no credit card required."
+  },
+  {
+    question: "What if I have multiple locations?",
+    answer: "Each location gets its own link (shoutout.bio/location1). Easy to manage from one account."
+  },
+  {
+    question: "How fast will I see results?",
+    answer: "First private feedback within days. Rating improvements in 4-8 weeks. Social growth visible within first month."
+  }
+];
+---
+
+<section class="faq-section" id="faq">
+    <div class="container">
+        <div class="center text-container">
+            <h3 class="h1-title">Common Questions</h3>
+        </div>
+
+        <div class="row">
+            <div class="two columns"></div>
+            <div class="eight columns faq-container">
+                <div class="faq-list">
+                    {faqData.map((item, index) => (
+                        <div class="faq-item" key={index}>
+                            <button class="faq-question">
+                                <span>{item.question}</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>{item.answer}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div class="two columns"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const faqButtons = document.querySelectorAll('.faq-question');
+
+        faqButtons.forEach((button, index) => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const faqItem = button.closest('.faq-item');
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = button.querySelector('.faq-icon');
+
+                // Close all other items
+                faqButtons.forEach((otherButton, otherIndex) => {
+                    if (otherIndex !== index) {
+                        const otherItem = otherButton.closest('.faq-item');
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        const otherIcon = otherButton.querySelector('.faq-icon');
+                        otherAnswer.style.maxHeight = '0';
+                        otherIcon.textContent = '+';
+                    }
+                });
+
+                // Toggle current item
+                if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                    answer.style.maxHeight = '0';
+                    icon.textContent = '+';
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.textContent = '−';
+                }
+            });
+        });
+    });
+</script>
+
+<style lang="scss">
+.faq-section{
+    background-color: #fff;
+    .text-container{
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+    }
+    .faq-container{
+        border: 1px solid #dde2e5;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #fff;
+    }
+    .faq-list {
+        .faq-item {
+            border: none;
+            padding: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #dde2e5;
+            padding: 20px 0;
+            background-color: transparent;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    .faq-question {
+        width: 100%;
+        background: transparent !important;
+        border: none !important;
+        text-align: left;
+        font-family: 'Manrope', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #111;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 !important;
+        margin: 0;
+        text-decoration: none;
+        appearance: none !important;
+        -webkit-appearance: none !important;
+        -moz-appearance: none !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        outline: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: normal;
+
+        &:hover, &:focus, &:active {
+            background: transparent !important;
+            border: none !important;
+            box-shadow: none !important;
+            color: var(--accent);
+            outline: none;
+        }
+
+        & span:first-child {
+            flex: 1;
+        }
+    }
+
+    .faq-icon {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #9ba5b9;
+        transition: transform 0.2s ease;
+        min-width: 30px;
+        text-align: right;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+
+        p {
+            margin: 10px 0;
+            position: relative;
+            padding-left: 20px;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #111;
+            font-weight: 400;
+            &::before{
+              position: absolute;
+              content: '';
+              left: 0; top: 5px;
+              display: inline-block;
+              transform: rotate(45deg);
+              height: 8px;
+              width: 5px;
+              border-bottom: 2px solid #9ba5b9;
+              border-right: 2px solid #9ba5b9;
+              z-index: 5;
+            }
+        }
+    }
+}
+</style>
