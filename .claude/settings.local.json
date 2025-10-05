@@ -2,7 +2,14 @@
   "permissions": {
     "allow": [
       "Read(//c/Users/admin/OneDrive/Desktop/**)",
-      "WebFetch(domain:www.untitledui.com)"
+      "WebFetch(domain:www.untitledui.com)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(lsof:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "WebFetch(domain:vercel.com)"
     ],
     "deny": [],
     "ask": []

@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Cookie Notice – Shoutout">
+    <Header />
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-content">
+                <h1 class="h1-title">Cookie Notice – Shoutout</h1>
+                <p class="last-updated">Last Updated: 6 October 2025</p>
+
+                <p>Shoutout uses cookies and similar technologies to enhance your experience.</p>
+
+                <h3>1. What Are Cookies?</h3>
+                <p>Cookies are small files stored on your device to improve website functionality, personalize content, and analyze traffic.</p>
+                <ul>
+                    <li><strong>First-Party Cookies:</strong> Set by Shoutout.</li>
+                    <li><strong>Third-Party Cookies:</strong> Set by partners for analytics or ads.</li>
+                </ul>
+
+                <h3>2. Why We Use Cookies</h3>
+                <ul>
+                    <li><strong>Essential:</strong> Required for basic platform functions.</li>
+                    <li><strong>Analytics:</strong> Track usage to improve services.</li>
+                    <li><strong>Marketing & Personalization:</strong> Deliver relevant content and promotions.</li>
+                </ul>
+
+                <h3>3. Other Tracking Technologies</h3>
+                <p>We may use pixels, beacons, or SDKs to understand usage patterns and improve performance.</p>
+
+                <h3>4. Control Your Cookies</h3>
+                <ul>
+                    <li>You can manage or reject cookies through your browser settings.</li>
+                    <li>Some features may not function properly if cookies are disabled.</li>
+                </ul>
+
+                <h3>5. Updates</h3>
+                <p>We may update this Cookie Notice periodically. Check the date above for the latest version.</p>
+
+                <p class="contact">Contact: <a href="mailto:support@shoutout.bio">support@shoutout.bio</a></p>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+
+<style lang="scss">
+.legal-page {
+    padding: 120px 0 50px 0;
+    min-height: 100vh;
+}
+
+.legal-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    h1 {
+        font-size: 4rem;
+        color: #111;
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+  
+    .last-updated {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        color: #111;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        margin: 1rem 0;
+        padding-left: 20px;
+
+        li {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .contact {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #dde2e5;
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-page {
+        padding: 100px 0 30px 0;
+    }
+
+    .legal-content {
+    
+        h3 {
+            font-size: 2rem;
+        }
+
+        p, li {
+            font-size: 1.5rem;
+        }
+    }
+}
+</style>

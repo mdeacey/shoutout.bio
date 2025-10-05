@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Privacy Notice – Shoutout">
+    <Header />
+    <main class="legal-page">
+        <div class="container">
+            <div class="legal-content">
+                <h1 class="h1-title">Privacy Notice – Shoutout</h1>
+                <p class="last-updated">Last Updated: 6 October 2025</p>
+
+                <p>At Shoutout, we are committed to protecting your privacy. This Privacy Notice explains how we collect, use, and protect your personal information.</p>
+
+                <h3>1. Information We Collect</h3>
+                <ul>
+                    <li><strong>Account Information:</strong> Name, email, profile details.</li>
+                    <li><strong>Transaction Data:</strong> Billing info if you purchase a subscription.</li>
+                    <li><strong>Usage Data:</strong> Pages visited, links clicked, device type, IP address.</li>
+                    <li><strong>Communication Data:</strong> Messages, feedback, or survey responses.</li>
+                </ul>
+
+                <h3>2. How We Use Your Information</h3>
+                <ul>
+                    <li>Provide and improve Shoutout Services.</li>
+                    <li>Process payments and manage subscriptions.</li>
+                    <li>Personalize your experience and deliver relevant content.</li>
+                    <li>Detect fraud and ensure security.</li>
+                    <li>Marketing and promotions (with consent).</li>
+                </ul>
+
+                <h3>3. Sharing Your Information</h3>
+                <ul>
+                    <li>With service providers to deliver our Services.</li>
+                    <li>With affiliate and partner programs if you opt-in.</li>
+                    <li>When required by law or to protect rights and safety.</li>
+                    <li>With your consent or at your direction.</li>
+                </ul>
+
+                <h3>4. International Transfers</h3>
+                <p>Your information may be transferred to countries with different data protection laws. We implement safeguards to protect your data.</p>
+
+                <h3>5. Cookies and Tracking</h3>
+                <p>We use cookies and similar technologies. See our Cookie Notice for details.</p>
+
+                <h3>6. Retention</h3>
+                <p>We retain personal information only as long as necessary for our services or legal obligations.</p>
+
+                <h3>7. Your Rights</h3>
+                <p>Depending on your location, you may have rights to:</p>
+                <ul>
+                    <li>Access, correct, or delete personal information.</li>
+                    <li>Restrict processing or object to certain uses.</li>
+                    <li>Opt-out of marketing communications.</li>
+                    <li>Withdraw consent where applicable.</li>
+                </ul>
+
+                <h3>8. Children</h3>
+                <p>Shoutout is not for children under 18. We delete data if we learn it was collected from a child.</p>
+
+                <h3>9. Changes to This Notice</h3>
+                <p>We may update this Privacy Notice. The "last updated" date shows the most recent revision.</p>
+
+                <p class="contact">Contact: <a href="mailto:privacy@shoutout.bio">privacy@shoutout.bio</a></p>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>
+
+<style lang="scss">
+.legal-page {
+    padding: 120px 0 50px 0;
+    min-height: 100vh;
+}
+
+.legal-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    
+    
+    .last-updated {
+        color: #666;
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        font-size: 2rem;
+        color: #111;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        margin: 1rem 0;
+        padding-left: 20px;
+
+        li {
+            font-size: 1.8rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+    }
+
+    .contact {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #dde2e5;
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .legal-page {
+        padding: 100px 0 30px 0;
+    }
+
+    .legal-content {
+    
+        h3 {
+            font-size: 2rem;
+        }
+
+        p, li {
+            font-size: 1.5rem;
+        }
+    }
+}
+</style>

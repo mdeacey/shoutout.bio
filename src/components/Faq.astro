@@ -33,6 +33,10 @@ const faqData = [
     answer: "Each location gets its own link (shoutout.bio/location1). Easy to manage from one account."
   },
   {
+    question: "How do I manage my subscription and billing?",
+    answer: "You can manage your subscription, billing, payment methods, and account settings anytime through your customer portal."
+  },
+  {
     question: "How fast will I see results?",
     answer: "First private feedback within days. Rating improvements in 4-8 weeks. Social growth visible within first month."
   }
@@ -68,38 +72,51 @@ const faqData = [
 </section>
 
 <script>
-    document.addEventListener('astro:page-load', () => {
-        const faqButtons = document.querySelectorAll('.faq-question');
+    (function() {
+        function initFAQ() {
+            const faqButtons = document.querySelectorAll('.faq-question');
 
-        faqButtons.forEach((button, index) => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                const faqItem = button.closest('.faq-item');
-                const answer = faqItem.querySelector('.faq-answer');
-                const icon = button.querySelector('.faq-icon');
+            faqButtons.forEach((button, index) => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const faqItem = button.closest('.faq-item');
+                    const answer = faqItem.querySelector('.faq-answer');
+                    const icon = button.querySelector('.faq-icon');
 
-                // Close all other items
-                faqButtons.forEach((otherButton, otherIndex) => {
-                    if (otherIndex !== index) {
-                        const otherItem = otherButton.closest('.faq-item');
-                        const otherAnswer = otherItem.querySelector('.faq-answer');
-                        const otherIcon = otherButton.querySelector('.faq-icon');
-                        otherAnswer.style.maxHeight = '0';
-                        otherIcon.textContent = '+';
+                    // Close all other items
+                    faqButtons.forEach((otherButton, otherIndex) => {
+                        if (otherIndex !== index) {
+                            const otherItem = otherButton.closest('.faq-item');
+                            const otherAnswer = otherItem.querySelector('.faq-answer');
+                            const otherIcon = otherButton.querySelector('.faq-icon');
+                            otherAnswer.style.maxHeight = '0';
+                            otherIcon.textContent = '+';
+                        }
+                    });
+
+                    // Toggle current item
+                    if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
+                        answer.style.maxHeight = '0';
+                        icon.textContent = '+';
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.textContent = '−';
                     }
                 });
-
-                // Toggle current item
-                if (answer.style.maxHeight && answer.style.maxHeight !== '0px') {
-                    answer.style.maxHeight = '0';
-                    icon.textContent = '+';
-                } else {
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
-                    icon.textContent = '−';
-                }
             });
-        });
-    });
+        }
+
+        // Try multiple events to ensure it runs
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initFAQ);
+        } else {
+            initFAQ();
+        }
+
+        // Also try on Astro page load
+        document.addEventListener('astro:page-load', initFAQ);
+        document.addEventListener('astro:after-swap', initFAQ);
+    })();
 </script>
 
 <style lang="scss">
