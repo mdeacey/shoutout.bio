@@ -16,10 +16,24 @@
             </div>
             <div class="eight columns price-item">
                 <div class="price-header m-margin">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <h5 class="l-subtitle">Early Bird</h5>
+                    <h5 class="l-subtitle" style="text-align: center; margin-bottom: 20px;">Limited Time Offer</h5>
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <p class="m-paragraph" style="text-align: center; max-width: 500px; margin: 0 auto;">
+                            We're inviting our first 100 businesses to join for just $1 — to help shape the future of Shoutout.
+                        </p>
                     </div>
-                    <h3 class="h2-title"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$29.90</span> $19.90<span class="s-paragraph"> / month</span></h3>
+                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
+                        <a href="https://tally.so/r/3Ey1Zl" target="_blank" rel="noopener noreferrer" style="flex: 1; text-decoration: none;">
+                            <div class="pricing-mini-card" style="flex: 1;">
+                                <h5 class="l-subtitle" style="margin-bottom: 10px;">First 3 Months</h5>
+                                <h3 class="h2-title" style="margin-bottom: 0;"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$23</span> $1 <span style="color: #9ba5b9; font-size: 1.8rem;">/Month</span></h3>
+                            </div>
+                        </a>
+                        <div class="pricing-mini-card" style="flex: 1;">
+                            <h5 class="l-subtitle" style="margin-bottom: 10px;">Then</h5>
+                            <h3 class="h2-title" style="margin-bottom: 0;"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$23</span> $9 <span style="color: #9ba5b9; font-size: 1.8rem;">/Month</span></h3>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="price-list">
@@ -61,8 +75,31 @@
       h3 .s-paragraph{
         color: #9ba5b9;
       }
+      .pricing-mini-card{
+        border: 1px solid #dde2e5;
+        padding: 20px;
+        border-radius: 12px;
+        background-color: #fff;
+        text-align: center;
+        &:first-child{
+          background-color: #ff4e1e;
+          border: none;
+          box-shadow: rgba(255, 255, 255, 0.1) -3px -3px 9px inset, rgba(255, 255, 255, 0.15) 0 3px 9px inset, rgba(255, 255, 255, 0.3) 0 1px 1px inset, rgba(0, 0, 0, 0.2) 0 -8px 36px inset, rgba(255, 255, 255, 0.3) 0 1px 5px inset;
+          background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, .23) 0, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 140, 90, .4) 0, rgba(255, 140, 90, 0) 69.79%, rgba(255, 140, 90, 0) 100%);
+          filter: brightness(1.05);
+          h5, h3, .s-paragraph{
+            color: #fff !important;
+          }
+          h3 span[style*="text-decoration: line-through"]{
+            color: #ffb399 !important;
+          }
+          h3 span[style*="color: #9ba5b9"]{
+            color: #ffb399 !important;
+          }
+        }
+      }
     }
-    .price-list{
+        .price-list{
       p{
         margin: 10px 0;
         position: relative;
@@ -81,7 +118,7 @@
         }
       }
     }
-    
+
   }
 }
  </style>
