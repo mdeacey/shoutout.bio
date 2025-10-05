@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/admin/OneDrive/Desktop/**)",
+      "WebFetch(domain:www.untitledui.com)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

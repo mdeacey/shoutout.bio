@@ -2,139 +2,389 @@
 import VectorOne from '../assets/ui-one.svg'
 import VectorTwo from '../assets/ui-two.svg'
 import VectorThree from '../assets/ui-three.svg'
+import Palette from '../assets/palette.svg'
+import Chain from '../assets/chain.svg'
+import Traffic from '../assets/traffic.svg'
 
 import Check from '../assets/check.svg'
 import Bolt from '../assets/bolt.svg'
 import Money from '../assets/money.svg'
 import Wallet from '../assets/wallet.svg'
 import Secure from '../assets/lock.svg'
+import Stars from '../assets/stars.svg'
+import Folder from '../assets/folder.svg'
+import Mailbox from '../assets/mailbox.svg'
+import Gift from '../assets/gift.svg'
 
 ---
 
 
+<!-- Why Businesses Use Section -->
+<section class="why-businesses-section" id="why-businesses">
+    <div class="container">
+        <div class="section-header center">
+            <h1 class="h1-title">Why Businesses Choose Shout Out</h1>
+        </div>
+
+        <!-- First Row of Boxes -->
+        <div class="row">
+            <div class="one-third column">
+                <div class="benefit-box">
+                    <div class="benefit-emoji">🚀</div>
+                    <h4 class="benefit-title">Boost Your Ratings — Fast</h4>
+                    <p class="benefit-description">Capture private feedback before it becomes public. Fix problems early and earn more 5-star reviews.</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="benefit-box">
+                    <div class="benefit-emoji">❤️</div>
+                    <h4 class="benefit-title">Build Real Loyalty</h4>
+                    <p class="benefit-description">Customers feel heard — and they come back. ShoutOut helps you turn feedback into relationships.</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="benefit-box">
+                    <div class="benefit-emoji">🔍</div>
+                    <h4 class="benefit-title">Know What to Improve</h4>
+                    <p class="benefit-description">Get clear insights from real customer comments so you can focus on what matters most.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row of Boxes -->
+        <div class="row">
+            <div class="one-third column">
+                <div class="benefit-box">
+                    <div class="benefit-emoji">⚡</div>
+                    <h4 class="benefit-title">Save Time Every Week</h4>
+                    <p class="benefit-description">Stop chasing reviews across different platforms — manage everything in one place.</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="benefit-box">
+                    <div class="benefit-emoji">🧩</div>
+                    <h4 class="benefit-title">100% Compliant</h4>
+                    <p class="benefit-description">Built with Google and platform policies in mind. We don’t filter reviews — we build better conversations.</p>
+                </div>
+            </div>
+            <div class="one-third column">
+                <div class="benefit-box">
+                    <div class="benefit-emoji">📈</div>
+                    <h4 class="benefit-title">Grow Organically</h4>
+                    <p class="benefit-description">Happy customers naturally share their experiences online, giving you steady, authentic growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
 <section class="product-brief" id="features">
     <div class="container">
+        <!-- Section Header -->
+        <div class="section-header center">
+            <h1 class="h1-title">How it Works</h1>
+        </div>
 
-
-        <!-- Feature Two -->
+        <!-- Feature Two - 2 Column Layout -->
         <div class="row product-brief-items">
-            <div class="brief-media center one-half column">
-                <img src={VectorTwo.src} class="md-width">
+            <!-- Left Column -->
+            <div class="one-half column">
+                <div class="feature-column">
+                    <h3 class="h2-title">Create Your Feedback Link</h3>
+                    <div class="brief-media-overlay palette-bg">
+                        <img src={Palette.src} class="background-image">
+                        <div class="chips-row">
+                            <div class="feature-grid">
+                                <img src={Bolt.src} alt="Fast connect">
+                                <p>Shoutout.bio/yourname link</p>
+                            </div>
+                            <div class="feature-grid">
+                                <img src={Folder.src} alt="Custom branding">
+                                <p>Your branding & colors</p>
+                            </div>
+                            <div class="feature-grid">
+                                <img src={Check.src} alt="Easy setup">
+                                <p>Easy setup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="brief-tab one-half column">
-                <h3 class="h2-title">Better, together.</h3>
-                <p class="m-paragraph m-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-
-                <div class="brief-items">
-                 <div class="row m-margin">
-                    <div class="one-half column feature-grid">
-                        <img src={Bolt.src} alt="Fast connect">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Money.src} alt="Money transfer">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="one-half column feature-grid">
-                        <img src={Wallet.src} alt="Digital wallet">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Secure.src} alt="Secure connection">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
+            <!-- Right Column -->
+            <div class="one-half column">
+                <div class="feature-column">
+                    <h3 class="h2-title">Share After Every Visit</h3>
+                    <div class="brief-media-overlay chain-bg">
+                        <img src={Chain.src} class="background-image">
+                        <div class="chips-row">
+                            <div class="feature-grid">
+                                <img src={Secure.src} alt="Secure connection">
+                                <p>Share anywhere</p>
+                            </div>
+                            <div class="feature-grid">
+                                <img src={Bolt.src} alt="Fast connect">
+                                <p>Quick ratings</p>
+                            </div>
+                            <div class="feature-grid">
+                                <img src={Wallet.src} alt="Digital wallet">
+                                <p>Mobile ready</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
-            </div>
-        </div>
-   
-        <!-- Feature One -->
-        <div class="row product-brief-items">
-            <div class="brief-tab one-half column">
-                <h3 class="h2-title">Better, together.</h3>
-                <p class="m-paragraph m-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-
-
-               <div class="brief-items">
-                 <div class="row m-margin">
-                    <div class="one-half column feature-grid">
-                        <img src={Bolt.src} alt="Fast connect">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Money.src} alt="Money transfer">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="one-half column feature-grid">
-                        <img src={Wallet.src} alt="Digital wallet">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                    <div class="one-half column feature-grid">
-                        <img src={Secure.src} alt="Secure connection">
-                        <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="brief-media center one-half column">
-                <img src={VectorOne.src} class="md-width">
             </div>
         </div>
 
-
-
-     <!-- Feature One -->
-      <div class="row product-brief-items">
-
-        <div class="brief-media center one-half column">
-            <img src={VectorThree.src} class="md-width">
+       <!-- Smart Routing Section -->
+        <div class="product-brief-items smart-routing">
+            <div class="center">
+                <div class="brief-media-overlay">
+                    <img src={Traffic.src} class="background-image" style="transform: translate(-50%, -200%) rotate(315deg);">
+                    <h3 class="h2-title">Smart Routing Does the Rest</h3>
+                    <div class="row">
+                        <div class="two columns">
+                            <!-- Empty columns for spacing -->
+                        </div>
+                        <div class="one-third column rating-card">
+                            <div class="price-header" style="text-align: center;">
+                                <div class="flow-step unhappy">
+                                    <img src={Secure.src} alt="1-3 Stars">
+                                    <span>1-3 Stars</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="one-third column rating-card">
+                            <div class="price-header" style="text-align: center;">
+                                <div class="flow-step happy">
+                                    <img src={Bolt.src} alt="4-5 Stars">
+                                    <span>4-5 Stars</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="two columns">
+                            <!-- Empty columns for spacing -->
+                        </div>
+                    </div>
+                  <div class="row">
+                        <div class="two columns">
+                            <!-- Empty columns for spacing -->
+                        </div>
+                        <div class="one-third column rating-arrow">
+                            <div class="flow-arrow">↓</div>
+                        </div>
+                        <div class="one-third column rating-arrow">
+                            <div class="flow-arrow">↓</div>
+                        </div>
+                        <div class="two columns">
+                            <!-- Empty columns for spacing -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="two columns">
+                            <!-- Empty columns for spacing -->
+                        </div>
+                        <div class="one-third column price-item unhappy-card">
+                            <div class="price-header m-margin">
+                                <div class="card-emoji">😰</div>
+                                <h5 class="l-subtitle">Private Resolution</h5>
+                                <p class="m-paragraph" style="text-align: center; margin-bottom: 15px;">Negative feedback goes directly to you for private resolution. Fix issues before they become public and turn unhappy customers into loyal advocates.</p>
+                            </div>
+                        </div>
+                        <div class="one-third column price-item happy-card">
+                            <div class="price-header m-margin">
+                                <div class="card-emoji">💸</div>
+                                <h5 class="l-subtitle">Public Promotion</h5>
+                                <p class="m-paragraph" style="text-align: center; margin-bottom: 15px;">Your happy customers can choose to leave a Google review, follow your social media, or both. More touchpoints = more loyal customers and better online presence.</p>
+                            </div>
+                        </div>
+                        <div class="two columns">
+                            <!-- Empty columns for spacing -->
+                        </div>
+                    </div>
+                </div>
         </div>
-        
-         <div class="brief-tab one-half column">
-            <h3 class="h2-title">Better, together.</h3>
-            <p class="m-paragraph m-margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
-
-
-            <div class="brief-items">
-                <div class="row m-margin">
-                <div class="one-half column feature-grid">
-                    <img src={Bolt.src} alt="Fast connect">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-                <div class="one-half column feature-grid">
-                    <img src={Money.src} alt="Money transfer">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="one-half column feature-grid">
-                    <img src={Wallet.src} alt="Digital wallet">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-                <div class="one-half column feature-grid">
-                    <img src={Secure.src} alt="Secure connection">
-                    <p class="s-paragraph">Lorem ipsum dolor sit amet, consectetur.</p>
-                </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
- </section>
 
 
  <style lang="scss">
 
+.problem-cards-section{
+   background-color: var(--tenary);
+   .row{
+     display: flex;
+     justify-content: center;
+   }
+   .flow-diagram{
+      max-width: 600px;
+      margin: 20px auto 8px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .flow-step{
+        background-color: #ffffff;
+        border: 1px solid #dde2e5;
+        border-radius: 8px;
+        padding: 9px 18px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--dark);
+        white-space: nowrap;
+        display: inline-block;
+      }
+      .flow-arrow{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: currentColor;
+      }
+    }
+   .rating-card{
+    margin-top: 8px;
+    .price-header{
+      .flow-step{
+        background-color: #fff;
+        border: 1px solid #dde2e5;
+        border-radius: 20px;
+        padding: 10px 20px;
+        font-weight: 600;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .rating-arrow{
+    text-align: center;
+    .flow-arrow{
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--accent);
+      display: block;
+      margin: 8px auto;
+    }
+  }
+  .price-item{
+    border: 1px solid #dde2e5;
+    padding: 30px;
+    margin-top: 8px;
+    border-radius: 20px;
+    background-color: #fff;
+    &.unhappy-card{
+      background-color: #f8d7da;
+      border-color: #dc3545;
+    }
+    &.happy-card{
+      background-color: #d4edda;
+      border-color: #28a745;
+    }
+    .price-header{
+      .card-emoji{
+        font-size: 6rem;
+        margin-bottom: 15px;
+        display: block;
+        text-align: center;
+      }
+      h5{
+        text-align: center;
+        margin-bottom: 15px;
+      }
+      p{
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+    .price-list{
+      p{
+        margin: 10px 0;
+        position: relative;
+        padding-left: 20px;
+        text-align: left;
+        &::before{
+          position: absolute;
+          content: '';
+          left: 0; top: 5px;
+          display: inline-block;
+          transform: rotate(45deg);
+          height: 8px;
+          width: 5px;
+          border-bottom: 2px solid #9ba5b9;
+          border-right: 2px solid #9ba5b9;
+          z-index: 5;
+        }
+      }
+    }
+  }
+}
+
+.why-businesses-section{
+  background-color: #ffffff;
+  .section-header{
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 64px;
+    h2{
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: var(--dark);
+    }
+  }
+  .benefit-box{
+    border: 1px solid #dde2e5;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center;
+    .benefit-emoji{
+      font-size: 6rem;
+      margin-bottom: 15px;
+      display: block;
+    }
+    .benefit-title{
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 1.9rem;
+      color: var(--dark);
+    }
+    .benefit-description{
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin: 0;
+      color: #666;
+    }
+  }
+  .row{
+    margin-bottom: 30px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
 .product-brief{
   background-color: var(--tenary);
+  .section-header{
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 64px;
+    h2{
+      margin-bottom: 20px;
+    }
+    p{
+      font-size: 1.8rem;
+      line-height: 1.6;
+      color: var(--dark);
+    }
+  }
   .hero-brand{
     padding-bottom: 50px;
     .brands{
@@ -142,20 +392,49 @@ import Secure from '../assets/lock.svg'
     }
   }
   .product-brief-items{
-    margin-bottom: 100px;
+    &:not(:last-child){
+      margin-bottom: 80px;
+    }
     .brief-tab{
-      padding-top: 50px;
+      /* removed padding-top to allow vertical centering */
     }
   }
 
-  .feature-grid{
+  .full-width{
+    width: 100%;
+  }
+
+  .chips-row{
     display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature-grid{
+    background-color: #ffffff;
+    border: 1px solid #dde2e5;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 1.3rem;
+    color: var(--dark);
+    white-space: nowrap;
+    display: inline-block;
+
     p{
-      margin: 0 0 0 10px;
+      margin: 0;
+      font-weight: 400;
+      color: var(--dark);
+      font-size: 1.3rem;
+      display: inline;
     }
     img{
-      width: 25px;
-      margin-top: -10px;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      vertical-align: middle;
+      display: inline-block;
     }
   }
 
@@ -167,9 +446,279 @@ import Secure from '../assets/lock.svg'
     padding-top: 40px;
   }
 
+  .brief-media-overlay{
+    min-height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .background-image{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 160px;
+      height: auto;
+      z-index: 0;
+    }
+    .chips-row{
+      position: relative;
+      z-index: 2;
+    }
+    .h2-title{
+      position: relative;
+      z-index: 2;
+      margin-bottom: 40px;
+    }
+  }
+  .smart-routing .brief-media-overlay{
+    display: block;
+  }
+
+  .feature-column{
+    text-align: center;
+    h3{
+      margin-bottom: 24px;
+    }
+  }
+
+  .smart-routing{
+    text-align: center;
+    .positive-outcomes{
+      text-align: left;
+      max-width: 400px;
+      margin: 20px auto;
+    }
+    .row{
+      display: flex;
+      justify-content: center;
+    }
+    .rating-card{
+      margin-top: 8px;
+      .price-header{
+        .flow-step{
+          background-color: #ffffff;
+          border: 1px solid #dde2e5;
+          border-radius: 8px;
+          padding: 9px 18px;
+          font-size: 1.3rem;
+          font-weight: 400;
+          color: var(--dark);
+          white-space: nowrap;
+          display: inline-block;
+          text-align: center;
+          box-sizing: border-box;
+          margin-bottom: 0;
+          img{
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            vertical-align: middle;
+            display: inline-block;
+          }
+          span{
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .rating-arrow{
+      text-align: center;
+      .flow-arrow{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: currentColor;
+        display: block;
+        margin: 8px auto;
+      }
+    }
+    .price-item{
+      border: 1px solid #dde2e5;
+      padding: 30px;
+      margin-top: 8px;
+      border-radius: 20px;
+      background-color: #fff;
+      position: relative;
+      z-index: 2;
+      .price-header{
+        .card-emoji{
+          font-size: 6rem;
+          margin-bottom: 15px;
+          display: block;
+          text-align: center;
+        }
+        h5{
+          text-align: center;
+          margin-bottom: 15px;
+        }
+        p{
+          text-align: center;
+          font-size: 1.6rem;
+          line-height: 1.5;
+          margin: 0;
+        }
+      }
+      .price-list{
+        p{
+          margin: 10px 0;
+          position: relative;
+          padding-left: 20px;
+          text-align: left;
+          &::before{
+            position: absolute;
+            content: '';
+            left: 0; top: 5px;
+            display: inline-block;
+            transform: rotate(45deg);
+            height: 8px;
+            width: 5px;
+            border-bottom: 2px solid #9ba5b9;
+            border-right: 2px solid #9ba5b9;
+            z-index: 5;
+          }
+        }
+      }
+    }
+    .flow-diagram{
+      max-width: 600px;
+      margin: 20px auto 8px auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      .flow-step{
+        background-color: #ffffff;
+        border: 1px solid #dde2e5;
+        border-radius: 8px;
+        padding: 9px 18px;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: var(--dark);
+        white-space: nowrap;
+        display: inline-block;
+      }
+      .flow-arrow{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: currentColor;
+      }
+      .curved-lines{
+        position: relative;
+        width: 300px;
+        height: 60px;
+        margin: 10px auto;
+      }
+      .branch-cards{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 20px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .branch-card{
+        width: 294px;
+        margin: 20px auto 0 auto;
+        border: 1px solid #dde2e5;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #fff;
+        &.unhappy{
+          background-color: #f8d7da;
+          border-color: #dc3545;
+        }
+        &.happy{
+          background-color: #d4edda;
+          border-color: #28a745;
+        }
+        .price-header{
+          .card-emoji{
+            font-size: 6rem;
+            margin-bottom: 15px;
+            display: block;
+            text-align: center;
+          }
+          h5{
+            text-align: center;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-size: 1.9rem;
+          }
+          p{
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width:700px) {
+    .why-businesses-section{
+      padding: 60px 0;
+      .section-header{
+        padding: 0 0 30px 0;
+        p{
+          font-size: 1.6rem;
+        }
+      }
+      .benefit-box{
+        padding: 30px;
+        margin-bottom: 20px;
+        .benefit-emoji{
+          font-size: 4rem;
+          margin-bottom: 15px;
+        }
+        .benefit-title{
+          font-size: 1.7rem;
+        }
+        .benefit-description{
+          font-size: 1.5rem;
+        }
+      }
+      .row{
+        margin-bottom: 0;
+      }
+    }
+    .product-brief{
+      padding: 60px 0;
+      .section-header{
+        padding: 0 0 30px 0;
+        p{
+          font-size: 1.6rem;
+        }
+      }
+    }
     .brief-tab{
         margin-left: 20px;
+    }
+    .feature-grid{
+      font-size: 1.2rem;
+      padding: 8px 14px;
+      margin-bottom: 12px;
+      p{
+        font-size: 1.2rem;
+      }
+      img{
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+    }
+    .smart-routing{
+      .flow-diagram{
+        .branch-cards{
+          flex-direction: column;
+          align-items: center;
+          .branch-card{
+            max-width: 300px;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }

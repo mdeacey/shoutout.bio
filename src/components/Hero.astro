@@ -12,10 +12,13 @@ import Gift from '../assets/gift.svg'
         <div class="d-table">
             <div class="d-table-cell center">
                 <div class="hero-copy">
-                    <h1 class="h1-title">Automate your design process for creative freedom</h1>
-                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat excepturi dignissimos exercitationem nesciunt, quo quibusdam assums? Architecto, placeat libero. </p>
+                    <h1 class="h1-title">Catch Bad Reviews Before They Happen</h1>
+                    <p>Give your customers a private, friendly way to share feedback — before they post it online. Turn unhappy customers into loyal fans and grow your reputation on autopilot.</p>
                     <div class="product-cta">
-                      <a href="#" class="button button-primary u-full-width">Start Trial — It's Free</a>
+                      <div style="display: flex; gap: 15px; justify-content: center; align-items: center;">
+                        <a href="https://tally.so/r/nG8RZQ" target="_blank" rel="noopener noreferrer" class="button">Live Demo</a>
+                        <a href="https://tally.so/r/3Ey1Zl" target="_blank" rel="noopener noreferrer" class="button button-primary">Get Shoutout</a>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -29,6 +32,20 @@ import Gift from '../assets/gift.svg'
         </div>
     </div>
  </section>
+
+<section class="targeting-strip">
+    <div class="container">
+        <div class="targeting-row">
+            <div class="targeting-headline">Built for Local Businesses</div>
+            <div class="targeting-icons">
+                <div class="icon-chip">🍽️ Restaurants</div>
+                <div class="icon-chip">🚗 Auto Repair</div>
+                <div class="icon-chip">🏥 Healthcare</div>
+                <div class="and-more-text">And more...</div>
+            </div>
+        </div>
+    </div>
+</section>
 
  <style lang="scss">
 
@@ -72,7 +89,7 @@ import Gift from '../assets/gift.svg'
         right: 0;
       }
       &:nth-child(5){
-        bottom: -20px;
+        bottom: 60px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -83,6 +100,69 @@ import Gift from '../assets/gift.svg'
         &:nth-child(4){
           display: none;
         }
+      }
+    }
+  }
+}
+
+.targeting-strip{
+  background-color: #cc4b06 !important;
+  padding: 16px 0 !important;
+  position: relative;
+  z-index: 5;
+  margin: 0;
+    .targeting-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .targeting-headline{
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  .targeting-icons{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    .icon-chip{
+      background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+      padding: 9px 18px;
+      font-size: 1.3rem;
+      color: #ffffff;
+      white-space: nowrap;
+      display: inline-block;
+    }
+    .and-more-text{
+      font-size: 1.3rem;
+      color: #ffffff;
+      white-space: nowrap;
+      display: inline-block;
+      align-self: center;
+    }
+  }
+}
+
+@media (max-width:700px) {
+  .targeting-strip{
+    .targeting-row{
+      flex-direction: column;
+      gap: 15px;
+      text-align: center;
+    }
+    .targeting-icons{
+      flex-wrap: wrap;
+      justify-content: center;
+      .icon-chip{
+        font-size: 1.2rem;
+        padding: 8px 14px;
+      }
+      .and-more-text{
+        font-size: 1.2rem;
       }
     }
   }
