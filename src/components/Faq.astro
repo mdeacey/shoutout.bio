@@ -41,9 +41,7 @@ const faqData = [
             <h3 class="h1-title">Common Questions</h3>
         </div>
 
-        <div class="row">
-            <div class="two columns"></div>
-            <div class="eight columns faq-container">
+        <div class="faq-container">
                 <div class="faq-list">
                     {faqData.map((item, index) => (
                         <div class="faq-item" key={index}>
@@ -58,8 +56,6 @@ const faqData = [
                     ))}
                 </div>
             </div>
-            <div class="two columns"></div>
-        </div>
     </div>
 </section>
 
@@ -120,16 +116,13 @@ const faqData = [
         margin-bottom: 40px;
     }
 
-    .row{
-        display: flex;
-        justify-content: center;
-    }
-
     .faq-container{
         border: 1px solid #dde2e5;
         padding: 30px;
         border-radius: 20px;
         background-color: #fff;
+        max-width: 578px;
+        margin: 0 auto;
     }
     .faq-list {
         .faq-item {
@@ -163,7 +156,7 @@ const faqData = [
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
         padding: 0 !important;
         margin: 0;
         text-decoration: none;

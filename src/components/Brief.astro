@@ -23,52 +23,40 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
         </div>
 
         <!-- First Row of Boxes -->
-        <div class="row">
-            <div class="one-third column">
-                <div class="benefit-box">
-                    <div class="benefit-emoji">🚀</div>
-                    <h4 class="benefit-title">Boost Your Ratings — Fast</h4>
-                    <p class="benefit-description">Capture private feedback before it becomes public. Fix problems early and earn more 5-star reviews.</p>
-                </div>
+        <div class="benefit-cards-container">
+            <div class="benefit-box">
+                <div class="benefit-emoji">🚀</div>
+                <h4 class="benefit-title">Boost Your Ratings — Fast</h4>
+                <p class="benefit-description">Capture private feedback before it becomes public. Fix problems early and earn more 5-star reviews.</p>
             </div>
-            <div class="one-third column">
-                <div class="benefit-box">
-                    <div class="benefit-emoji">❤️</div>
-                    <h4 class="benefit-title">Build Real Loyalty</h4>
-                    <p class="benefit-description">Customers feel heard — and they come back. ShoutOut helps you turn feedback into relationships.</p>
-                </div>
+            <div class="benefit-box">
+                <div class="benefit-emoji">❤️</div>
+                <h4 class="benefit-title">Build Real Loyalty</h4>
+                <p class="benefit-description">Customers feel heard — and they come back. ShoutOut helps you turn feedback into relationships.</p>
             </div>
-            <div class="one-third column">
-                <div class="benefit-box">
-                    <div class="benefit-emoji">🔍</div>
-                    <h4 class="benefit-title">Know What to Improve</h4>
-                    <p class="benefit-description">Get clear insights from real customer comments so you can focus on what matters most.</p>
-                </div>
+            <div class="benefit-box">
+                <div class="benefit-emoji">🔍</div>
+                <h4 class="benefit-title">Know What to Improve</h4>
+                <p class="benefit-description">Get clear insights from real customer comments so you can focus on what matters most.</p>
             </div>
         </div>
 
         <!-- Second Row of Boxes -->
-        <div class="row">
-            <div class="one-third column">
-                <div class="benefit-box">
-                    <div class="benefit-emoji">⚡</div>
-                    <h4 class="benefit-title">Save Time Every Week</h4>
-                    <p class="benefit-description">Stop chasing reviews across different platforms — manage everything in one place.</p>
-                </div>
+        <div class="benefit-cards-container">
+            <div class="benefit-box">
+                <div class="benefit-emoji">⚡</div>
+                <h4 class="benefit-title">Save Time Every Week</h4>
+                <p class="benefit-description">Stop chasing reviews across different platforms — manage everything in one place.</p>
             </div>
-            <div class="one-third column">
-                <div class="benefit-box">
-                    <div class="benefit-emoji">🧩</div>
-                    <h4 class="benefit-title">100% Compliant</h4>
-                    <p class="benefit-description">Built with Google and platform policies in mind. We don’t filter reviews — we build better conversations.</p>
-                </div>
+            <div class="benefit-box">
+                <div class="benefit-emoji">🧩</div>
+                <h4 class="benefit-title">100% Compliant</h4>
+                <p class="benefit-description">Built with Google and platform policies in mind. We don't filter reviews — we build better conversations.</p>
             </div>
-            <div class="one-third column">
-                <div class="benefit-box">
-                    <div class="benefit-emoji">📈</div>
-                    <h4 class="benefit-title">Grow Organically</h4>
-                    <p class="benefit-description">Happy customers naturally share their experiences online, giving you steady, authentic growth.</p>
-                </div>
+            <div class="benefit-box">
+                <div class="benefit-emoji">📈</div>
+                <h4 class="benefit-title">Grow Organically</h4>
+                <p class="benefit-description">Happy customers naturally share their experiences online, giving you steady, authentic growth.</p>
             </div>
         </div>
     </div>
@@ -83,50 +71,46 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
         </div>
 
         <!-- Feature Two - 2 Column Layout -->
-        <div class="row product-brief-items">
+        <div class="feature-columns-container">
             <!-- Left Column -->
-            <div class="one-half column">
-                <div class="feature-column">
-                    <h3 class="h2-title">Create Your Feedback Link</h3>
-                    <div class="brief-media-overlay palette-bg">
-                        <img src={Palette.src} class="background-image">
-                        <div class="chips-row">
-                            <div class="feature-grid">
-                                <div set:html={LinkIcon()}></div>
-                                <p>Shoutout.bio/yourname link</p>
-                            </div>
-                            <div class="feature-grid">
-                                <div set:html={ColorsIcon()}></div>
-                                <p>Your branding & colors</p>
-                            </div>
-                            <div class="feature-grid">
-                                <div set:html={CheckIcon()}></div>
-                                <p>Easy setup</p>
-                            </div>
+            <div class="feature-column">
+                <h3 class="h2-title">Create Your Feedback Link</h3>
+                <div class="brief-media-overlay palette-bg">
+                    <img src={Palette.src} class="background-image">
+                    <div class="chips-row">
+                        <div class="feature-grid">
+                            <div set:html={LinkIcon()}></div>
+                            <p>Shoutout.bio/yourname link</p>
+                        </div>
+                        <div class="feature-grid">
+                            <div set:html={ColorsIcon()}></div>
+                            <p>Your branding & colors</p>
+                        </div>
+                        <div class="feature-grid">
+                            <div set:html={CheckIcon()}></div>
+                            <p>Easy setup</p>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Right Column -->
-            <div class="one-half column">
-                <div class="feature-column">
-                    <h3 class="h2-title">Share After Every Visit</h3>
-                    <div class="brief-media-overlay chain-bg">
-                        <img src={Chain.src} class="background-image">
-                        <div class="chips-row">
-                            <div class="feature-grid">
-                                <div set:html={ShareIcon()}></div>
-                                <p>Share anywhere</p>
-                            </div>
-                            <div class="feature-grid">
-                                <div set:html={ClockIcon()}></div>
-                                <p>Quick ratings</p>
-                            </div>
-                            <div class="feature-grid">
-                                <div set:html={MobileIcon()}></div>
-                                <p>Mobile ready</p>
-                            </div>
+            <div class="feature-column">
+                <h3 class="h2-title">Share After Every Visit</h3>
+                <div class="brief-media-overlay chain-bg">
+                    <img src={Chain.src} class="background-image">
+                    <div class="chips-row">
+                        <div class="feature-grid">
+                            <div set:html={ShareIcon()}></div>
+                            <p>Share anywhere</p>
+                        </div>
+                        <div class="feature-grid">
+                            <div set:html={ClockIcon()}></div>
+                            <p>Quick ratings</p>
+                        </div>
+                        <div class="feature-grid">
+                            <div set:html={MobileIcon()}></div>
+                            <p>Mobile ready</p>
                         </div>
                     </div>
                 </div>
@@ -139,11 +123,8 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
                 <div class="brief-media-overlay">
                     <img src={Traffic.src} class="background-image" style="transform: translate(-50%, -200%) rotate(315deg);">
                     <h3 class="h2-title">Smart Routing Does the Rest</h3>
-                    <div class="row">
-                        <div class="two columns">
-                            <!-- Empty columns for spacing -->
-                        </div>
-                        <div class="one-third column rating-card">
+                    <div class="rating-cards-container">
+                        <div class="rating-card">
                             <div class="price-header" style="text-align: center;">
                                 <div class="flow-step unhappy">
                                     <div set:html={SecureIcon()}></div>
@@ -151,7 +132,7 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
                                 </div>
                             </div>
                         </div>
-                        <div class="one-third column rating-card">
+                        <div class="rating-card">
                             <div class="price-header" style="text-align: center;">
                                 <div class="flow-step happy">
                                     <div set:html={StarIcon()}></div>
@@ -159,44 +140,29 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
                                 </div>
                             </div>
                         </div>
-                        <div class="two columns">
-                            <!-- Empty columns for spacing -->
-                        </div>
                     </div>
-                  <div class="row">
-                        <div class="two columns">
-                            <!-- Empty columns for spacing -->
-                        </div>
-                        <div class="one-third column rating-arrow">
+                  <div class="rating-arrows-container">
+                        <div class="rating-arrow">
                             <div class="flow-arrow">↓</div>
                         </div>
-                        <div class="one-third column rating-arrow">
+                        <div class="rating-arrow">
                             <div class="flow-arrow">↓</div>
                         </div>
-                        <div class="two columns">
-                            <!-- Empty columns for spacing -->
-                        </div>
                     </div>
-                    <div class="row">
-                        <div class="two columns">
-                            <!-- Empty columns for spacing -->
-                        </div>
-                        <div class="one-third column price-item unhappy-card">
+                    <div class="price-cards-container">
+                        <div class="price-item unhappy-card">
                             <div class="price-header m-margin">
                                 <div class="card-emoji">😰</div>
                                 <h5 class="l-subtitle">Private Resolution</h5>
                                 <p class="m-paragraph" style="text-align: center; margin-bottom: 15px;">Negative feedback goes directly to you for private resolution. Fix issues before they become public and turn unhappy customers into loyal advocates.</p>
                             </div>
                         </div>
-                        <div class="one-third column price-item happy-card">
+                        <div class="price-item happy-card">
                             <div class="price-header m-margin">
                                 <div class="card-emoji">💸</div>
                                 <h5 class="l-subtitle">Public Promotion</h5>
                                 <p class="m-paragraph" style="text-align: center; margin-bottom: 15px;">Your happy customers can choose to leave a Google review, follow your social media, or both. More touchpoints = more loyal customers and better online presence.</p>
                             </div>
-                        </div>
-                        <div class="two columns">
-                            <!-- Empty columns for spacing -->
                         </div>
                     </div>
                 </div>
@@ -205,12 +171,145 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
 
  <style lang="scss">
 
+    // New container classes to replace Skeleton column system
+    .benefit-cards-container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 30px;
+
+        .benefit-box {
+            flex: 1;
+            margin-left: 4%;
+            border: 1px solid #dde2e5;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: #fff;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            gap: 15px;
+
+            .benefit-box {
+                margin-left: 0;
+            }
+        }
+    }
+
+    .feature-columns-container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 80px;
+
+        .feature-column {
+            flex: 1;
+            margin-left: 4%;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+
+    .rating-cards-container {
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+
+        .rating-card {
+            flex: 1;
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .rating-arrows-container {
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+
+        .rating-arrow {
+            flex: 1;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .price-cards-container {
+        max-width: 640px;
+        margin: 0 auto;
+        display: flex;
+        gap: 20px;
+
+        .price-item {
+            flex: 1;
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
 .problem-cards-section{
    background-color: var(--tenary);
-   .row{
-     display: flex;
-     justify-content: center;
-   }
+
+   .problem-cards-container {
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        margin-bottom: 30px;
+
+        .problem-box {
+            flex: 1;
+            margin-left: 4%;
+            border: 1px solid #dde2e5;
+            padding: 30px;
+            border-radius: 20px;
+            background-color: #fff;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+            gap: 15px;
+
+            .problem-box {
+                margin-left: 0;
+            }
+        }
+    }
    .flow-diagram{
       max-width: 600px;
       margin: 20px auto 8px auto;
@@ -236,7 +335,7 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
       }
     }
    .rating-card{
-    margin-top: 8px;
+    margin-top: 0;
     .price-header{
       .flow-step{
         background-color: #fff;
