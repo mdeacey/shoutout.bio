@@ -1,21 +1,61 @@
 ---
 export interface Props {
-	title: string;
+	title?: string;
+	description?: string;
+	canonical?: string;
+	image?: string;
+	type?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title = "Shoutout | Catch Bad Reviews Before They Happen",
+	description = "Give your customers a private, friendly way to share feedback before they post it online. Turn unhappy customers into loyal fans and grow your reputation on autopilot.",
+	canonical = "https://shoutout.bio",
+	image = "/og-image.jpg",
+	type = "website"
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description">
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="canonical" href={canonical} />
 		<meta name="generator" content={Astro.generator} />
-    <meta name="description" content="Idol is an elegant landing page template for micro SaaS products built with AstroJS & Skeleton CSS"/>
+
+		<!-- SEO Meta Tags -->
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="reputation management, customer feedback, bad reviews, review prevention, customer service, online reputation, local business, google reviews, social media reviews" />
+		<meta name="author" content="Shoutout.bio" />
+		<meta name="robots" content="index, follow" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content={type} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={image} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:site_name" content="Shoutout.bio" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={canonical} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={image} />
+
+		<!-- Additional SEO -->
+		<meta name="theme-color" content="#ff4e1e" />
+		<meta name="language" content="en" />
+
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
 	</head>
 	<body>

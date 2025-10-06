@@ -9,7 +9,13 @@ import Faq from '../components/Faq.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Idol | Micro SaaS landing page">
+<Layout
+    title="Shoutout | Catch Bad Reviews Before They Happen"
+    description="Prevent bad reviews before they happen. Give customers a private way to share feedback and turn unhappy customers into loyal fans. Try it free for 30 days."
+    canonical="https://shoutout.bio"
+    image="/og-image.jpg"
+    type="website"
+>
 	<Header />
 	<Hero />
 	<Problem />
@@ -18,6 +24,36 @@ import Footer from '../components/Footer.astro';
 	<Faq />
 	<Footer />
 </Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Shoutout.bio",
+  "description": "Give your customers a private, friendly way to share feedback before they post it online. Turn unhappy customers into loyal fans and grow your reputation on autopilot.",
+  "url": "https://shoutout.bio",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "1",
+    "priceCurrency": "USD",
+    "description": "First 3 months for $1, then $9/month"
+  },
+  "creator": {
+    "@type": "Organization",
+    "name": "Shoutout.bio"
+  },
+  "featureList": [
+    "Private feedback channel",
+    "Smart routing to Google Reviews and social media",
+    "Email notifications for negative feedback",
+    "Custom branded link",
+    "QR code generation",
+    "Unlimited feedback requests"
+  ]
+}
+</script>
 
 <style>
 

@@ -2,6 +2,14 @@
 import Logo from '../assets/logo.svg'
 ---
 
+<div class="announcement-strip">
+    <div class="container">
+        <p class="announcement-text">
+            Limited Time Offer: We're inviting our first 100 businesses to join for just $1 — use code  <span class="code-chip">SHOUTOUT</span>  at checkout
+        </p>
+    </div>
+</div>
+
 <header class="nav">
     <div class="container row">
      <div class="nav-logo one-third column">
@@ -30,7 +38,7 @@ import Logo from '../assets/logo.svg'
 .nav{
     padding: 15px 0;
     position: fixed;
-    top: 0;
+    top: 36px;
     width: 100%;
     background: white;
     z-index: 1000;
@@ -87,5 +95,44 @@ import Logo from '../assets/logo.svg'
         right: 20px;
       }
     }
+}
+
+.announcement-strip {
+  background-color: #e55a2b;
+  padding: 8px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  .announcement-text {
+    margin: -1px 0 0 0;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    .code-chip {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
+      padding: 3px 5px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin: 0 2px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .announcement-strip {
+    .announcement-text {
+      font-size: 1.2rem;
+
+      .code-chip {
+        font-size: 1.1rem;
+      }
+    }
+  }
 }
 </style>
