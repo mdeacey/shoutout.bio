@@ -8,7 +8,7 @@ import Footer from '../components/Footer.astro';
     title="Terms of Service | Shoutout.bio"
     description="Read Shoutout.bio's terms of service and usage policies. Understand your rights and responsibilities when using our feedback management platform."
     canonical="https://shoutout.bio/terms"
-    image="/og-image.jpg"
+    image="/terms-image.jpg"
     type="website"
 >
     <Header />
@@ -84,6 +84,39 @@ import Footer from '../components/Footer.astro';
     </main>
     <Footer />
 </Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Terms of Service | Shoutout.bio",
+  "description": "Read Shoutout.bio's terms of service and usage policies. Understand your rights and responsibilities when using our feedback management platform.",
+  "url": "https://shoutout.bio/terms",
+  "dateModified": "2025-10-06",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Shoutout.bio",
+    "url": "https://shoutout.bio"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://shoutout.bio"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Terms of Service",
+        "item": "https://shoutout.bio/terms"
+      }
+    ]
+  }
+}
+</script>
 
 <style lang="scss">
 .legal-page {

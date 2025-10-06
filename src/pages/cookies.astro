@@ -8,7 +8,7 @@ import Footer from '../components/Footer.astro';
     title="Cookie Policy | Shoutout.bio"
     description="Shoutout.bio's cookie policy explains how we use cookies and similar technologies to enhance your experience on our platform."
     canonical="https://shoutout.bio/cookies"
-    image="/og-image.jpg"
+    image="/cookies-image.jpg"
     type="website"
 >
     <Header />
@@ -52,6 +52,39 @@ import Footer from '../components/Footer.astro';
     </main>
     <Footer />
 </Layout>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Cookie Policy | Shoutout.bio",
+  "description": "Shoutout.bio's cookie policy explains how we use cookies and similar technologies to enhance your experience on our platform.",
+  "url": "https://shoutout.bio/cookies",
+  "dateModified": "2025-10-06",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "Shoutout.bio",
+    "url": "https://shoutout.bio"
+  },
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://shoutout.bio"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Cookie Policy",
+        "item": "https://shoutout.bio/cookies"
+      }
+    ]
+  }
+}
+</script>
 
 <style lang="scss">
 .legal-page {
