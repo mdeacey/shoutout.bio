@@ -1,23 +1,17 @@
----
-import LinkedIn from '../assets/linkedin.svg'
-import Twitter from '../assets/twitter.svg'
----
 
 <footer>
     <div class="container row">
         <div class="footer-link flex js one-half column">
-            <a href="#">About</a> <a href="#">Help Center</a>
-            <a href="/privacy">Privacy</a>
             <a href="/terms">Terms</a>
+            <a href="/privacy">Privacy</a>
             <a href="/cookies">Cookies</a>
-            <a href="https://billing.stripe.com/p/login/5kQ8wQ0pR48f8ko5wb28800" target="_blank" rel="noopener noreferrer">Customer Portal</a>
+            <a href="/feedback">Feedback</a>
+            <a href="/portal">Customer Portal</a>
         </div>
         <div class="footer-note one-half column">
             <div class="u-pull-right">
                 <div class="flex">
-                    <p>© Idol 2023</p>
-                    <a href="#"><img src={Twitter.src} alt="Twitter icon"></a>
-                    <a href="#"><img src={LinkedIn.src} alt="Linkedin icon"></a>
+                    <p>© Shoutout 2025</p>
                 </div>
             </div>
         </div>
@@ -29,7 +23,7 @@ import Twitter from '../assets/twitter.svg'
     display: flex;;
   }
 footer{
-    padding: 40px 0;
+    padding: 0;
     background-color: #fff;
 
     a, p{
@@ -39,6 +33,7 @@ footer{
     .footer-link a{
       padding-right: 20px;
       text-decoration: none;
+      white-space: nowrap;
     }
     .container{
       padding: 30px;

@@ -1,6 +1,18 @@
 ---
 const faqData = [
   {
+    question: "How does Shoutout.bio actually work?",
+    answer: "We create a private feedback channel before public reviews, route satisfied customers to Google Reviews AND social media, send unhappy customer feedback to your inbox, and help you grow across all platforms simultaneously. Everything is fully compliant with all platform policies."
+  },
+  {
+    question: "What don't you do?",
+    answer: "We don't prevent customers from leaving reviews, suppress negative feedback, violate any terms of service, or post automatically to social media—customers always choose where to share."
+  },
+  {
+    question: "So what's the truth about how this works?",
+    answer: "We give customers a way to talk to you first. Most problems can be fixed with a simple conversation. And when customers are happy, we make it dead simple for them to shout you out wherever they prefer—Google, Instagram, Facebook, or all of the above."
+  },
+  {
     question: "Is this compliant with Google's policies?",
     answer: "Yes. We create a private feedback channel first—customers always choose where to share publicly."
   },
@@ -27,18 +39,6 @@ const faqData = [
   {
     question: "Can I try it free?",
     answer: "30-day free trial, no credit card required."
-  },
-  {
-    question: "What if I have multiple locations?",
-    answer: "Each location gets its own link (shoutout.bio/location1). Easy to manage from one account."
-  },
-  {
-    question: "How do I manage my subscription and billing?",
-    answer: "You can manage your subscription, billing, payment methods, and account settings anytime through your customer portal."
-  },
-  {
-    question: "How fast will I see results?",
-    answer: "First private feedback within days. Rating improvements in 4-8 weeks. Social growth visible within first month."
   }
 ];
 ---
@@ -121,7 +121,7 @@ const faqData = [
 
 <style lang="scss">
 .faq-section{
-    background-color: #fff;
+    background-color: #dfe9f3;
     .text-container{
         margin-top: 0;
         margin-bottom: 40px;
@@ -196,7 +196,7 @@ const faqData = [
     }
 
     .faq-icon {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 400;
         color: #9ba5b9;
         transition: transform 0.2s ease;
@@ -212,23 +212,11 @@ const faqData = [
         p {
             margin: 10px 0;
             position: relative;
-            padding-left: 20px;
-            font-size: 1.2rem;
+            padding-left: 0;
+            font-size: 1.8rem;
             line-height: 1.6;
             color: #111;
             font-weight: 400;
-            &::before{
-              position: absolute;
-              content: '';
-              left: 0; top: 5px;
-              display: inline-block;
-              transform: rotate(45deg);
-              height: 8px;
-              width: 5px;
-              border-bottom: 2px solid #9ba5b9;
-              border-right: 2px solid #9ba5b9;
-              z-index: 5;
-            }
         }
     }
 }

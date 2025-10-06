@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/feedback",
+      "destination": "https://tally.so/r/nG8RZQ",
+      "permanent": false
+    },
+    {
+      "source": "/demo",
+      "destination": "https://tally.so/r/nG8RZQ",
+      "permanent": false
+    },
+    {
+      "source": "/getshoutout",
+      "destination": "https://tally.so/r/3Ey1Zl",
+      "permanent": false
+    },
+    {
+      "source": "/portal",
+      "destination": "https://billing.stripe.com/p/login/5kQ8wQ0pR48f8ko5wb28800",
+      "permanent": false
+    }
+  ]
+}
