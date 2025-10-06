@@ -114,14 +114,17 @@ const faqData = [
 <style lang="scss">
 .faq-section{
     background-color: #dfe9f3;
+
     .text-container{
         margin-top: 0;
         margin-bottom: 40px;
     }
+
     .row{
         display: flex;
         justify-content: center;
     }
+
     .faq-container{
         border: 1px solid #dde2e5;
         padding: 30px;
@@ -160,7 +163,7 @@ const faqData = [
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         padding: 0 !important;
         margin: 0;
         text-decoration: none;
@@ -172,7 +175,7 @@ const faqData = [
         outline: none;
         text-transform: none;
         letter-spacing: normal;
-        line-height: normal;
+        line-height: 1.4;
 
         &:hover, &:focus, &:active {
             background: transparent !important;
@@ -184,6 +187,7 @@ const faqData = [
 
         & span:first-child {
             flex: 1;
+            padding-right: 1rem;
         }
     }
 
@@ -194,6 +198,8 @@ const faqData = [
         transition: transform 0.2s ease;
         min-width: 30px;
         text-align: right;
+        flex-shrink: 0;
+        margin-top: 2px;
     }
 
     .faq-answer {
