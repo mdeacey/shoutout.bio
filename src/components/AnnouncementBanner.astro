@@ -1,0 +1,59 @@
+---
+---
+
+<div class="announcement-strip">
+    <div class="container">
+        <p class="announcement-text">
+            <span class="short-text">Get Your $1 Shoutout — use code <span class="code-chip">SHOUTOUT</span> at checkout</span>
+            <span class="long-text">We're inviting our first 100 businesses to join for just $1 — use code <span class="code-chip">SHOUTOUT</span> at checkout</span>
+        </p>
+    </div>
+</div>
+
+<style lang="scss">
+.announcement-strip {
+  background-color: #e55a2b;
+  padding: 8px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  .announcement-text {
+    margin: -1px 0 0 0;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 500;
+
+    .short-text {
+      display: block;
+    }
+
+    .long-text {
+      display: none;
+    }
+
+    .code-chip {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+  }
+
+  // Show longer text on larger screens
+  @media (min-width: 768px) {
+    .announcement-text {
+      .short-text {
+        display: none;
+      }
+
+      .long-text {
+        display: block;
+      }
+    }
+  }
+}
+</style>

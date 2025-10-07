@@ -10,36 +10,21 @@
             <p>For less than the cost of one bad review, protect your reputation for months. Start free today.</p>
         </div>
 
-        <div class="row">
-            <div class="one-third column price-item">
-                <div class="price-header m-margin">
-                    <div class="card-emoji">😰</div>
-                    <h5 class="l-subtitle">A 2-Star Review is a Failed Conversation</h5>
-                    <p>Negative feedback happens when customers don't know who to talk to. By the time you see it on Google, the damage is done.</p>
-                </div>
-
-                <div class="price-list">
-                </div>
+        <div class="benefit-grid">
+            <div class="benefit-card">
+                <div class="card-emoji">😰</div>
+                <h5 class="l-subtitle">A 2-Star Review is a Failed Conversation</h5>
+                <p>Negative feedback happens when customers don't know who to talk to. By the time you see it on Google, the damage is done.</p>
             </div>
-            <div class="one-third column price-item">
-                <div class="price-header m-margin">
-                    <div class="card-emoji">💸</div>
-                    <h5 class="l-subtitle">One Bad Review Costs Thousands</h5>
-                    <p>A single 1-star review can drive away dozens of potential customers. Studies show just one star can cost your business up to 9% of its revenue.</p>
-                </div>
-
-                <div class="price-list">
-                </div>
+            <div class="benefit-card">
+                <div class="card-emoji">💸</div>
+                <h5 class="l-subtitle">One Bad Review Costs Thousands</h5>
+                <p>A single 1-star review can drive away dozens of potential customers. Studies show just one star can cost your business up to 9% of its revenue.</p>
             </div>
-            <div class="one-third column price-item">
-                <div class="price-header m-margin">
-                    <div class="card-emoji">⏰</div>
-                    <h5 class="l-subtitle">You're Always Reacting, Never Preventing</h5>
-                    <p>Chasing reviews across Google, Facebook, Instagram, and Yelp is exhausting. You need one system that handles everything.</p>
-                </div>
-
-                <div class="price-list">
-                </div>
+            <div class="benefit-card">
+                <div class="card-emoji">⏰</div>
+                <h5 class="l-subtitle">You're Always Reacting, Never Preventing</h5>
+                <p>Chasing reviews across Google, Facebook, Instagram, and Yelp is exhausting. You need one system that handles everything.</p>
             </div>
         </div>
     </div>
@@ -54,33 +39,58 @@
    .text-container{
      padding-top: 0;
      margin-top: 0;
-     margin: 0 auto 64px;
    }
-  .price-item{
-    border: 1px solid #444444;
-    padding: 30px;
-    margin-top: 0;
-    border-radius: 20px;
-    background-color: #ffffff;
-    color: #000000;
-    .price-header{
-      .card-emoji{
+
+   .benefit-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        @media (max-width: 1080px) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+
+            .benefit-card:nth-child(3) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 700px) {
+            grid-template-columns: 1fr;
+            gap: 20px;
+
+            .benefit-card:nth-child(3) {
+                display: block;
+            }
+        }
+    }
+
+    .benefit-card {
+        border: 1px solid #444444;
+        padding: 30px;
+        border-radius: 20px;
+        background-color: #ffffff;
+        color: #000000;
+        text-align: center;
+    }
+
+    .benefit-card .card-emoji{
         font-size: 6rem;
         margin-bottom: 15px;
         display: block;
         text-align: center;
-      }
-      h5{
+    }
+
+    .benefit-card h5{
         text-align: center;
         margin-bottom: 15px;
-      }
-      p{
+    }
+
+    .benefit-card p{
         text-align: center;
         font-size: 1.6rem;
         line-height: 1.5;
         margin: 0;
-      }
     }
-  }
 }
  </style>

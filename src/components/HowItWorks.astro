@@ -15,52 +15,6 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
 
 ---
 
-<!-- Why Businesses Use Section -->
-<section class="why-businesses-section" id="why-businesses">
-    <div class="container">
-        <div class="section-header center">
-            <h1 class="h1-title">Why Businesses Choose Shoutout</h1>
-        </div>
-
-        <!-- First Row of Boxes -->
-        <div class="benefit-cards-container">
-            <div class="benefit-box">
-                <div class="benefit-emoji">🚀</div>
-                <h4 class="benefit-title">Boost Your Ratings — Fast</h4>
-                <p class="benefit-description">Capture private feedback before it becomes public. Fix problems early and earn more 5-star reviews.</p>
-            </div>
-            <div class="benefit-box">
-                <div class="benefit-emoji">❤️</div>
-                <h4 class="benefit-title">Build Real Loyalty</h4>
-                <p class="benefit-description">Customers feel heard — and they come back. ShoutOut helps you turn feedback into relationships.</p>
-            </div>
-            <div class="benefit-box">
-                <div class="benefit-emoji">🔍</div>
-                <h4 class="benefit-title">Know What to Improve</h4>
-                <p class="benefit-description">Get clear insights from real customer comments so you can focus on what matters most.</p>
-            </div>
-        </div>
-
-        <!-- Second Row of Boxes -->
-        <div class="benefit-cards-container">
-            <div class="benefit-box">
-                <div class="benefit-emoji">⚡</div>
-                <h4 class="benefit-title">Save Time Every Week</h4>
-                <p class="benefit-description">Stop chasing reviews across different platforms — manage everything in one place.</p>
-            </div>
-            <div class="benefit-box">
-                <div class="benefit-emoji">🧩</div>
-                <h4 class="benefit-title">100% Compliant</h4>
-                <p class="benefit-description">Built with Google and platform policies in mind. We don't filter reviews — we build better conversations.</p>
-            </div>
-            <div class="benefit-box">
-                <div class="benefit-emoji">📈</div>
-                <h4 class="benefit-title">Grow Organically</h4>
-                <p class="benefit-description">Happy customers naturally share their experiences online, giving you steady, authentic growth.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- How It Works Section -->
 <section class="product-brief" id="features">
@@ -171,7 +125,8 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
 
  <style lang="scss">
 
-    // New container classes to replace Skeleton column system
+
+// Rest of the existing styles...
     .benefit-cards-container {
         max-width: 960px;
         margin: 0 auto;
@@ -189,18 +144,51 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
             &:first-child {
                 margin-left: 0;
             }
+
+            .benefit-emoji{
+                font-size: 6rem;
+                margin-bottom: 15px;
+                display: block;
+                text-align: center;
+            }
+            .benefit-title{
+                text-align: center;
+                margin-bottom: 15px;
+                font-weight: 700;
+                font-size: 1.9rem;
+                color: var(--dark);
+            }
+            .benefit-description{
+                text-align: center;
+                font-size: 1.6rem;
+                line-height: 1.5;
+                margin: 0;
+                color: #666;
+            }
         }
 
-        &:last-child {
-            margin-bottom: 0;
+        @media (max-width: 1080px) {
+            flex-wrap: wrap !important;
+            gap: 20px;
+
+            .benefit-box {
+                width: calc(50% - 10px) !important;
+                flex: none !important;
+                margin-left: 0 !important;
+                margin-bottom: 0 !important;
+            }
         }
 
         @media (max-width: 700px) {
             flex-direction: column;
-            gap: 15px;
 
             .benefit-box {
                 margin-left: 0;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
     }
@@ -209,7 +197,7 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
         max-width: 960px;
         margin: 0 auto;
         display: flex;
-        margin-bottom: 80px;
+        margin-bottom: 40px;
 
         .feature-column {
             flex: 1;
@@ -416,57 +404,10 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
   }
 }
 
-.why-businesses-section{
-  background-color: #ffffff;
-  .section-header{
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 64px;
-    h2{
-      margin-bottom: 20px;
-    }
-    p{
-      font-size: 1.8rem;
-      line-height: 1.6;
-      color: var(--dark);
-    }
-  }
-  .benefit-box{
-    border: 1px solid #dde2e5;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: #fff;
-    text-align: center;
-    .benefit-emoji{
-      font-size: 6rem;
-      margin-bottom: 15px;
-      display: block;
-    }
-    .benefit-title{
-      text-align: center;
-      margin-bottom: 15px;
-      font-weight: 700;
-      font-size: 1.9rem;
-      color: var(--dark);
-    }
-    .benefit-description{
-      text-align: center;
-      font-size: 1.6rem;
-      line-height: 1.5;
-      margin: 0;
-      color: #666;
-    }
-  }
-  .row{
-    margin-bottom: 30px;
-    &:last-child{
-      margin-bottom: 0;
-    }
-  }
-}
 
 .product-brief{
   background: linear-gradient(to bottom, #dfe9f3 0%, white 100%);
+  padding: 70px 0 0 0; // Only top padding, no bottom
   .section-header{
     text-align: center;
     max-width: 600px;
@@ -566,7 +507,7 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
     .h2-title{
       position: relative;
       z-index: 2;
-      margin-bottom: 40px;
+      margin-bottom: 16px;
     }
   }
   .smart-routing .brief-media-overlay{
@@ -576,7 +517,7 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
   .feature-column{
     text-align: center;
     h3{
-      margin-bottom: 24px;
+      margin-bottom: 8px;
     }
   }
 
@@ -755,32 +696,6 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
   }
 
   @media (max-width:700px) {
-    .why-businesses-section{
-      padding: 60px 0;
-      .section-header{
-        padding: 0 0 30px 0;
-        p{
-          font-size: 1.6rem;
-        }
-      }
-      .benefit-box{
-        padding: 30px;
-        margin-bottom: 20px;
-        .benefit-emoji{
-          font-size: 4rem;
-          margin-bottom: 15px;
-        }
-        .benefit-title{
-          font-size: 1.7rem;
-        }
-        .benefit-description{
-          font-size: 1.5rem;
-        }
-      }
-      .row{
-        margin-bottom: 0;
-      }
-    }
     .product-brief{
       padding: 60px 0;
       .section-header{
@@ -807,6 +722,12 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
       }
     }
     .smart-routing{
+      // Hide rating cards and arrows on mobile
+      .rating-cards-container,
+      .rating-arrows-container {
+        display: none;
+      }
+
       .flow-diagram{
         .branch-cards{
           flex-direction: column;
@@ -820,4 +741,4 @@ const SecureIcon = () => `<svg width="20" height="20" viewBox="0 0 24 24" fill="
     }
   }
 }
- </style>
+</style>

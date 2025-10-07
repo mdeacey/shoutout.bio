@@ -9,20 +9,19 @@ import Star from '../assets/star.svg'
 
 <section class="product-hero">
     <div class="container">
-        <div class="d-table">
-            <div class="d-table-cell center">
-                <div class="hero-copy">
+        <div class="hero-copy">
+                    <div class="mobile-bomb">
+                        <img src={Bomb.src} alt="Dynamite">
+                    </div>
                     <h1 class="h1-title">Catch Bad Reviews Before They Happen</h1>
                     <p>Give your customers a private, friendly way to share feedback — before they post it online. Turn unhappy customers into loyal fans and grow your reputation on autopilot.</p>
                     <div class="product-cta">
-                      <div style="display: flex; gap: 8px; justify-content: center; align-items: center;">
+                      <div class="cta-buttons">
                         <a href="/shoutout" target="_blank" rel="noopener noreferrer" class="button">Live Demo</a>
-                        <a href="/getshoutout" target="_blank" rel="noopener noreferrer" class="button button-primary">Get Shoutout for $1</a>
+                        <a href="/getshoutout" target="_blank" rel="noopener noreferrer" class="button button-primary">Get Your $1 Shoutout</a>
                       </div>
                     </div>
                 </div>
-            </div>
-        </div>
         <div class="hero-media">
             <img src={Bomb.src} alt="Dynamite">
             <img src={Mailbox.src} alt="Mailbox">
@@ -33,75 +32,47 @@ import Star from '../assets/star.svg'
     </div>
  </section>
 
-<section class="targeting-strip">
-    <div class="container">
-        <div class="targeting-content">
-            <div class="targeting-headline">Built for Every Business</div>
-            <div class="targeting-icons">
-                <div class="icon-chip chip-1">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                    </svg>
-                    Services
-                </div>
-                <div class="icon-chip chip-2">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <path d="M16 10a4 4 0 0 1-8 0"></path>
-                    </svg>
-                    Retail
-                </div>
-                <div class="icon-chip chip-3">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                    </svg>
-                    Hospitality
-                </div>
-                <div class="icon-chip chip-4">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="2" y1="12" x2="22" y2="12"></line>
-                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                    </svg>
-                    Online
-                </div>
-                <div class="icon-chip chip-5">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="9" cy="7" r="4"></circle>
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                    </svg>
-                    <span class="community-text">Community</span>
-                    <span class="and-more-text">...And More</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
  <style lang="scss">
 
 
 .product-hero{
-  padding: 180px 0 50px 0;
+  padding: 70px 0 280px 0;
+  margin-top: 104px;
   .container{
     position: relative;
-    .d-table{
-      height: 500px;
-     }
   }
   .hero-copy{
-    h1, p{
+    .mobile-bomb{
+      display: none;
+      text-align: center;
+      margin-bottom: 20px;
+
+      img{
+        width: 160px;
+        height: auto;
+      }
+    }
+    h1{
       max-width: 600px;
       margin: 20px auto;
+      text-align: center;
+    }
+
+    p{
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .cta-buttons{
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
     }
   }
   .hero-media{
-    padding: 5px;
     border-radius: 48px;
     img{
       position: absolute;
@@ -123,7 +94,7 @@ import Star from '../assets/star.svg'
         right: 0;
       }
       &:nth-child(5){
-        bottom: 20px;
+        bottom: -220px;
         left: 50%;
         transform: translateX(-50%);
       }
@@ -138,131 +109,20 @@ import Star from '../assets/star.svg'
   }
 }
 
-.targeting-strip{
-  background-color: #dfe9f3 !important;
-  padding: 16px 0 !important;
-  position: relative;
-  z-index: 5;
-  margin: 0;
-
-  .targeting-content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 1050px;
-    margin: 0 auto;
+// Mobile hero adjustments
+@media (max-width: 960px) {
+  .product-hero{
+    padding: 70px 0;
   }
 
-  .targeting-headline{
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #111;
-    white-space: nowrap;
-    flex-shrink: 0;
+  .hero-media{
+    display: none; // Hide entire floating images container on mobile
   }
 
-  .targeting-icons{
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-    align-items: center;
-    flex-shrink: 0;
-
-    .icon-chip{
-      background-color: #ffffff;
-      border: 1px solid #dde2e5;
-      border-radius: 8px;
-      padding: 9px 18px;
-      font-size: 1.3rem;
-      color: #111;
-      white-space: nowrap;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-
-      svg{
-        width: 18px;
-        height: 18px;
-        flex-shrink: 0;
-      }
-
-      .community-text {
-        display: block;
-      }
-
-      .and-more-text {
-        display: none;
-      }
-    }
+  .hero-copy .mobile-bomb{
+    display: block !important; // Show bomb above title
   }
 }
 
-// Responsive breakpoints for chips - replacement logic
-@media (max-width: 1200px) {
-  .chip-5 {
-    .community-text {
-      display: none;
-    }
-    .and-more-text {
-      display: block;
-    }
-  }
-}
-
-@media (max-width: 1000px) {
-  .chip-4 {
-    display: none;
-  }
-}
-
-@media (max-width: 850px) {
-  .chip-3 {
-    display: none;
-  }
-}
-
-// Tablet breakpoint - reduce gap
-@media (max-width: 900px) {
-  .targeting-strip {
-    .targeting-content {
-      gap: 1rem;
-    }
-  }
-}
-
-// Mobile breakpoint - stack vertically
-@media (max-width: 700px) {
-  .targeting-strip{
-    .targeting-content{
-      flex-direction: column;
-      gap: 15px;
-      text-align: center;
-    }
-
-    .targeting-icons{
-      flex-wrap: wrap;
-      justify-content: center;
-
-      .icon-chip{
-        font-size: 1.2rem;
-        padding: 9px 18px;
-      }
-    }
-  }
-}
-
-@media (max-width: 550px) {
-  .chip-2 {
-    display: none;
-  }
-}
-
-@media (max-width: 450px) {
-  .chip-1 {
-    display: none;
-  }
-}
 
  </style>

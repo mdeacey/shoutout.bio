@@ -10,7 +10,9 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "WebFetch(domain:vercel.com)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(taskkill:*)",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []

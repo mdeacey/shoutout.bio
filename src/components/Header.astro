@@ -2,15 +2,6 @@
 import Logo from '../assets/logo.svg'
 ---
 
-<div class="announcement-strip">
-    <div class="container">
-        <p class="announcement-text">
-            <span class="short-text">Limited Time Offer: Get Shoutout for just $1 — use code  <span class="code-chip">SHOUTOUT</span>  at checkout</span>
-            <span class="long-text">Limited Time Offer: We're inviting our first 100 businesses to join for just $1 — use code  <span class="code-chip">SHOUTOUT</span>  at checkout</span>
-        </p>
-    </div>
-</div>
-
 <header class="nav">
     <div class="container">
         <div class="nav-content">
@@ -30,56 +21,12 @@ import Logo from '../assets/logo.svg'
 
             <div class="nav-cta">
                 <a href="/shoutout" target="_blank" rel="noopener noreferrer" class="button">Live Demo</a>
-                <a href="/getshoutout" target="_blank" rel="noopener noreferrer" class="button button-primary">Get Shoutout for $1</a>
+                <a href="/getshoutout" target="_blank" rel="noopener noreferrer" class="button button-primary">Get Your $1 Shoutout</a>
             </div>
-
-            <!-- Mobile menu button -->
-            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </div>
 </header>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
-    const navCta = document.querySelector('.nav-cta');
-
-    if (mobileMenuToggle) {
-      mobileMenuToggle.addEventListener('click', function() {
-        this.classList.toggle('is-open');
-        navMenu.classList.toggle('is-open');
-        navCta.classList.toggle('is-open');
-      });
-    }
-
-    // Close mobile menu when clicking on a link
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuToggle.classList.remove('is-open');
-        navMenu.classList.remove('is-open');
-        navCta.classList.remove('is-open');
-      });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const isClickInsideNav = navMenu.contains(event.target);
-      const isClickInsideToggle = mobileMenuToggle.contains(event.target);
-
-      if (!isClickInsideNav && !isClickInsideToggle && navMenu.classList.contains('is-open')) {
-        mobileMenuToggle.classList.remove('is-open');
-        navMenu.classList.remove('is-open');
-        navCta.classList.remove('is-open');
-      }
-    });
-  });
-</script>
 
 <style lang="scss">
 
@@ -88,6 +35,7 @@ import Logo from '../assets/logo.svg'
     position: fixed;
     top: 36px;
     width: 100%;
+    height: 40px;
     background: white;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -100,6 +48,15 @@ import Logo from '../assets/logo.svg'
       height: 100%;
     }
 
+    nav ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      height: 100%;
+    }
+
     li {
       list-style: none;
       height: 100%;
@@ -108,13 +65,15 @@ import Logo from '../assets/logo.svg'
       margin: 0;
     }
 
-    nav ul {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      height: 100%;
+    a:not(.button):not(.logo-link){
+      color: #111;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--accent);
+      }
     }
 
     .nav-cta {
@@ -129,17 +88,7 @@ import Logo from '../assets/logo.svg'
       white-space: nowrap;
     }
 
-    a:not(.button):not(.logo-link){
-      color: #111;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: var(--accent);
-      }
-    }
-
+    
     .nav-logo {
       display: flex;
       align-items: center;
@@ -156,187 +105,39 @@ import Logo from '../assets/logo.svg'
       }
     }
 
-    .mobile-menu-toggle {
-      display: none;
-      flex-direction: column;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0.5rem;
-
-      span {
-        width: 25px;
-        height: 3px;
-        background: #111;
-        margin: 3px 0;
-        transition: 0.3s;
-        border-radius: 2px;
-      }
-    }
-
+    
     // Tablet styles
     @media (max-width: 900px) {
       .nav-content {
         gap: 1rem;
       }
 
-      nav ul {
-        gap: 1.5rem;
-        height: 100%;
+      .nav-menu {
+        display: none; // Hide nav items at 900px and below
       }
 
       .nav-cta {
         gap: 0.6rem;
       }
-
-      .nav-logo .logo-link img {
-        width: 140px;
-      }
     }
 
-    // Mobile styles
+    // Mobile styles - keep logo consistent
     @media (max-width: 768px) {
-      .nav-menu {
-        position: fixed;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        z-index: 999;
-
-        &.is-open {
-          transform: translateY(0);
-          opacity: 1;
-          visibility: visible;
-        }
-
-        ul {
-          flex-direction: column;
-          padding: 2rem;
-          gap: 1.5rem;
-
-          li a {
-            font-size: 1.1rem;
-            padding: 0.5rem 0;
-          }
-        }
+      .nav-content {
+        gap: 1rem;
       }
 
       .nav-cta {
-        display: none;
-
-        &.is-open {
-          display: flex;
-          position: fixed;
-          top: calc(100% + 200px);
-          left: 2rem;
-          right: 2rem;
-          flex-direction: column;
-          align-items: stretch;
-
-          .button {
-            text-align: center;
-            padding: 1rem;
-          }
-        }
-      }
-
-      .mobile-menu-toggle {
-        display: flex;
-
-        &.is-open {
-          span:nth-child(1) {
-            transform: rotate(-45deg) translate(-5px, 6px);
-          }
-
-          span:nth-child(2) {
-            opacity: 0;
-          }
-
-          span:nth-child(3) {
-            transform: rotate(45deg) translate(-5px, -6px);
-          }
-        }
-      }
-
-      .nav-content {
-        gap: 0;
-      }
-
-      .nav-logo .logo-link img {
-        width: 130px;
+        gap: 0.6rem;
       }
     }
 
-    // Small mobile
-    @media (max-width: 480px) {
-      .nav-logo .logo-link img {
-        width: 120px;
-      }
-    }
-}
-
-.announcement-strip {
-  background-color: #e55a2b;
-  padding: 8px 0;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-
-  .announcement-text {
-    margin: -1px 0 0 0;
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 500;
-
-    .short-text {
-      display: block;
-    }
-
-    .long-text {
-      display: none;
-    }
-
-    .code-chip {
-      background-color: rgba(255, 255, 255, 0.2);
-      color: white;
-      padding: 3px 5px;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 1.3rem;
-      margin: 0 2px;
-    }
-  }
-
-  @media (min-width: 961px) {
-    .announcement-text {
-      .short-text {
+    // Hide live demo button at 600px and below
+    @media (max-width: 600px) {
+      .nav-cta .button:not(.button-primary) {
         display: none;
       }
-
-      .long-text {
-        display: block;
-      }
     }
-  }
 }
 
-@media (max-width: 700px) {
-  .announcement-strip {
-    .announcement-text {
-      font-size: 1.2rem;
-
-      .code-chip {
-        font-size: 1.1rem;
-      }
-    }
-  }
-}
 </style>

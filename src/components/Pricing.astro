@@ -20,16 +20,20 @@
                             at checkout.
                         </p>
                     </div>
-                    <div style="display: flex; justify-content: space-between; align-items: center; gap: 20px;">
-                        <a href="/getshoutout" target="_blank" rel="noopener noreferrer" style="flex: 1; text-decoration: none;">
-                            <div class="pricing-mini-card">
-                                <h5 class="l-subtitle" style="margin-bottom: 10px;">First 3 Months</h5>
-                                <h3 class="h2-title" style="margin-bottom: 0;"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$23</span> $1 <span style="color: #9ba5b9; font-size: 1.8rem;">/Month</span></h3>
+                    <div style="display: flex; justify-content: space-between; align-items: stretch; gap: 20px;">
+                        <div style="flex: 1;">
+                            <a href="/getshoutout" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: block;">
+                                <div class="pricing-mini-card pricing-card-highlight" style="display: flex; flex-direction: column; justify-content: center; min-height: 100px;">
+                                    <h5 class="l-subtitle" style="margin-bottom: 10px;">First 3 Months</h5>
+                                    <h3 class="h2-title" style="margin-bottom: 0;"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$24</span> $1 <span style="color: #9ba5b9; font-size: 1.8rem;">/Month</span></h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="flex: 1;">
+                            <div class="pricing-mini-card" style="display: flex; flex-direction: column; justify-content: center; min-height: 100px;">
+                                <h5 class="l-subtitle" style="margin-bottom: 10px;">Then</h5>
+                                <h3 class="h2-title" style="margin-bottom: 0;"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$24</span> $9 <span style="color: #9ba5b9; font-size: 1.8rem;">/Month</span></h3>
                             </div>
-                        </a>
-                        <div class="pricing-mini-card" style="flex: 1;">
-                            <h5 class="l-subtitle" style="margin-bottom: 10px;">Then</h5>
-                            <h3 class="h2-title" style="margin-bottom: 0;"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$23</span> $9 <span style="color: #9ba5b9; font-size: 1.8rem;">/Month</span></h3>
                         </div>
                     </div>
                 </div>
@@ -73,7 +77,8 @@
         border-radius: 12px;
         background-color: #fff;
         text-align: center;
-        &:first-child{
+
+        &.pricing-card-highlight{
           background-color: #ff4e1e;
           border: none;
           box-shadow: rgba(255, 255, 255, 0.1) -3px -3px 9px inset, rgba(255, 255, 255, 0.15) 0 3px 9px inset, rgba(255, 255, 255, 0.3) 0 1px 1px inset, rgba(0, 0, 0, 0.2) 0 -8px 36px inset, rgba(255, 255, 255, 0.3) 0 1px 5px inset;
@@ -89,7 +94,7 @@
             color: #ffb399 !important;
           }
         }
-      }
+        }
     }
         .price-list{
       p{

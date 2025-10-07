@@ -1,8 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import AnnouncementBanner from '../components/AnnouncementBanner.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro'
-import Brief from '../components/Brief.astro'
+import TargetingStrip from '../components/TargetingStrip.astro'
+import Benefits from '../components/Benefits.astro'
+import HowItWorks from '../components/HowItWorks.astro'
 import Problem from '../components/Problem.astro'
 import Pricing from '../components/Pricing.astro';
 import Faq from '../components/Faq.astro';
@@ -16,10 +19,13 @@ import Footer from '../components/Footer.astro';
     image="/home.png"
     type="website"
 >
+	<AnnouncementBanner />
 	<Header />
 	<Hero />
+	<TargetingStrip />
 	<Problem />
-	<Brief />
+	<Benefits />
+	<HowItWorks />
 	<Pricing />
 	<Faq />
 	<Footer />

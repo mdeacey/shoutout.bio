@@ -1,0 +1,105 @@
+---
+---
+
+<section class="benefits-section" id="features">
+    <div class="container">
+        <div class="center text-container">
+            <h3 class="h1-title">Why Businesses Choose Shoutout</h3>
+            <p>Join hundreds of businesses protecting their reputation and turning unhappy customers into loyal fans.</p>
+        </div>
+
+        <div class="benefit-grid">
+            <div class="benefit-card">
+                <div class="card-emoji">📱</div>
+                <h5 class="l-subtitle">One Simple Link</h5>
+                <p>Give customers one easy way to share feedback privately. No complex forms, no apps to download — just a simple link that works everywhere.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-emoji">🔀</div>
+                <h5 class="l-subtitle">Smart Routing</h5>
+                <p>Happy customers automatically get guided to Google Reviews, Yelp, or social media. Unhappy customers reach you privately first.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-emoji">🚨</div>
+                <h5 class="l-subtitle">Real-time Alerts</h5>
+                <p>Get instant email notifications when customers share negative feedback. Fix issues before they become public bad reviews.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-emoji">🎨</div>
+                <h5 class="l-subtitle">Your Brand, Your Way</h5>
+                <p>Custom branded links, QR codes, and feedback forms that match your business. Professional appearance builds customer trust.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-emoji">📈</div>
+                <h5 class="l-subtitle">Grow Your Reputation</h5>
+                <p>Turn satisfied customers into 5-star reviews on Google, Facebook, and Yelp. Watch your online reputation improve automatically.</p>
+            </div>
+            <div class="benefit-card">
+                <div class="card-emoji">💰</div>
+                <h5 class="l-subtitle">Affordable Peace of Mind</h5>
+                <p>For less than the cost of one lost customer, protect your business reputation for months. ROI that pays for itself.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+.benefits-section {
+  background-color: #ffffff;
+
+  .text-container {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .h1-title {
+    margin-bottom: 20px;
+  }
+
+  .benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 960px;
+    margin: 0 auto;
+
+    @media (max-width: 1080px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  .benefit-card {
+    border: 1px solid #e5e7eb;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+
+    .card-emoji {
+      font-size: 6rem;
+      margin-bottom: 15px;
+      display: block;
+      text-align: center;
+    }
+
+    h5 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+  }
+}
+</style>
