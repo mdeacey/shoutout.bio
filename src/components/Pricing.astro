@@ -31,7 +31,7 @@
                         </div>
                         <div style="flex: 1;">
                             <div class="pricing-mini-card" style="display: flex; flex-direction: column; justify-content: center; min-height: 100px;">
-                                <h5 class="l-subtitle" style="margin-bottom: 10px;">Then</h5>
+                                <h5 class="l-subtitle" style="margin-bottom: 10px;">Then<span class="mobile-break">&nbsp;</span>Just</h5>
                                 <h3 class="h2-title" style="margin-bottom: 0;"><span style="text-decoration: line-through; color: #9ba5b9; font-size: 1.8rem;">$24</span> $9 <span style="color: #9ba5b9; font-size: 1.8rem;">/Month</span></h3>
                             </div>
                         </div>
@@ -118,4 +118,68 @@
 
   }
 }
+
+// Mobile pricing card adjustments
+@media (max-width: 768px) {
+  .pricing-table {
+    .price-item {
+      padding: 20px;
+
+      // Container for both cards
+      > div[style*="display: flex"] {
+        flex-direction: column;
+        gap: 15px;
+
+        > div[style*="flex: 1"] {
+          flex: 1;
+          display: flex;
+
+          .pricing-mini-card {
+            flex: 1;
+            min-height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            // Align prices horizontally
+            h3 {
+              display: flex;
+              align-items: baseline;
+              justify-content: center;
+              gap: 2px;
+              flex-wrap: wrap;
+
+              span[style*="text-decoration: line-through"] {
+                order: 1;
+              }
+
+              // Main price
+              span:not([style*="text-decoration: line-through"]):not([style*="color: #9ba5b9"]) {
+                order: 2;
+                font-size: 2.4rem !important;
+              }
+
+              span[style*="color: #9ba5b9"] {
+                order: 3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Show space on desktop, line break on mobile
+.mobile-break {
+  display: inline;
+}
+
+@media (max-width: 456px) {
+  .mobile-break::after {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
  </style>

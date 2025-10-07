@@ -1,19 +1,15 @@
 
 <footer>
-    <div class="container row">
-        <div class="footer-link flex js one-half column">
+    <div class="container">
+        <div class="footer-links-row">
             <a href="/terms">Terms</a>
             <a href="/privacy">Privacy</a>
             <a href="/cookies">Cookies</a>
             <a href="/feedback">Feedback</a>
             <a href="/portal">Customer Portal</a>
         </div>
-        <div class="footer-note one-half column">
-            <div class="u-pull-right">
-                <div class="flex">
-                    <p style="margin: 0;">© Shoutout 2025</p>
-                </div>
-            </div>
+        <div class="footer-copyright-row">
+            <p style="margin: 0;">© Shoutout 2025</p>
         </div>
     </div>
 </footer>
@@ -30,40 +26,50 @@ footer{
       color: #222;
       font-size: 1.8rem;
     }
-    .footer-link a{
-      padding-right: 20px;
-      text-decoration: none;
-      white-space: nowrap;
-    }
+
     .container{
       padding: 30px 0;
       border-radius: 50px;
-      
-      .footer-note{
-        a{
-          padding-left: 20px;
-          img{
-            width: 28px;
-            @media (max-width: 700px) {
-              width: 20px;
-            }
-          }
+      text-align: center;
+
+      .footer-links-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+
+        a {
+          text-decoration: none;
+          white-space: nowrap;
+          padding: 3px 8px;
         }
       }
+
+      .footer-copyright-row {
+        margin-top: 5px;
+      }
     }
+
     @media (max-width:700px) {
       p, a{
         font-size: 1.5rem;
       }
-        .flex{
-            justify-content: center;
+
+      .container {
+        .footer-links-row {
+          gap: 10px;
+          margin-bottom: 15px;
+
+          a {
+            padding: 3px 8px;
+          }
         }
-        .column{
-            padding: 10px 0;
+
+        .footer-copyright-row {
+          margin-top: 5px;
         }
-        .u-pull-right{
-            float: none;
-        }
+      }
     }
   }
 </style>
