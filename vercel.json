@@ -19,6 +19,11 @@
       "source": "/portal",
       "destination": "https://billing.stripe.com/p/login/5kQ8wQ0pR48f8ko5wb28800",
       "permanent": false
+    },
+    {
+      "source": "/freeforever",
+      "destination": "https://tally.so/r/wQPkWA",
+      "permanent": false
     }
   ]
 }
